@@ -1,17 +1,30 @@
-// components/Login.js
 import React, { useState } from "react";
-// import { handleLogin } from "../utils/auth.js"; // הייבוא של הפונקציה
-import { handleLogin } from "../../utils/auth.js"; 
-import "./Login.css"; // ייבוא קובץ ה-CSS
+import { useNavigate } from "react-router-dom";
+import { handleLogin } from "../../utils/api.jsx";
+import "./Login.css";
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    const success = await handleLogin(username, password);
+    
+    if (success) {
+      navigate("/Home");
+    } else {
+      alert("Login failed! Please check your credentials.");
+    }
+  };
 
   return (
     <div>
       <h2>Login</h2>
-      <form onSubmit={(e) => handleLogin(e, username, password)}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Username"
