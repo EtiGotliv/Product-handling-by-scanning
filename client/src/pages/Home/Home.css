@@ -1,0 +1,126 @@
+/* Home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl; /* תמיכה בעברית */
+    background-color: #f0f0f0;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    max-width: 180px;
+    height: auto;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .action-button {
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .action-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .camera-button {
+    background-color: #3498DB;
+  }
+  
+  .camera-button:hover {
+    background-color: #2980B9;
+  }
+  
+  .name-button {
+    background-color: #16A085;
+  }
+  
+  .name-button:hover {
+    background-color: #1ABC9C;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .button-icon {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Icons for the buttons */
+  .camera-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z'%3E%3C/path%3E%3Ccircle cx='12' cy='12' r='3.2'%3E%3C/circle%3E%3C/svg%3E");
+  }
+  
+  .name-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .welcome-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    
+    .action-button {
+      padding: 16px;
+      font-size: 1rem;
+    }
+    
+    .logo {
+      max-width: 140px;
+    }
+  }
